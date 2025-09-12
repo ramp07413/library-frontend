@@ -1,0 +1,584 @@
+
+> library-management-react@0.0.0 dev
+> vite
+
+
+  VITE v7.1.5  ready in 94 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+2:55:12 PM [vite] (client) hmr update /src/components/Expenses.jsx, /src/index.css
+2:55:29 PM [vite] (client) hmr update /src/components/Expenses.jsx, /src/index.css
+2:55:29 PM [vite] Internal server error: /Users/rampareek/Desktop/Library-Management-System-main/frontend/src/components/Expenses.jsx: Unexpected token, expected "," (214:16)
+
+  212 |                   </td>
+  213 |                 </tr>
+> 214 |               ))}
+      |                 ^
+  215 |             </tbody>
+  216 |           </table>
+  217 |         </div>
+  Plugin: vite:react-babel
+  File: /Users/rampareek/Desktop/Library-Management-System-main/frontend/src/components/Expenses.jsx:214:16
+  212 |                    </td>
+  213 |                  </tr>
+  214 |                ))}
+      |                  ^
+  215 |              </tbody>
+  216 |            </table>
+      at constructor (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:367:19)
+      at JSXParserMixin.raise (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:6630:19)
+      at JSXParserMixin.unexpected (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:6650:16)
+      at JSXParserMixin.expect (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:6930:12)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11669:14)
+      at JSXParserMixin.parseExprAtom (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11335:23)
+      at JSXParserMixin.parseExprAtom (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:4797:20)
+      at JSXParserMixin.parseExprSubscripts (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11085:23)
+      at JSXParserMixin.parseUpdate (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11070:21)
+      at JSXParserMixin.parseMaybeUnary (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11050:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10903:61)
+      at JSXParserMixin.parseExprOps (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10908:23)
+      at JSXParserMixin.parseMaybeConditional (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10885:23)
+      at JSXParserMixin.parseMaybeAssign (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10835:21)
+      at JSXParserMixin.parseConditional (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10897:29)
+      at JSXParserMixin.parseMaybeConditional (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10889:17)
+      at JSXParserMixin.parseMaybeAssign (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10835:21)
+      at JSXParserMixin.parseConditional (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10897:29)
+      at JSXParserMixin.parseMaybeConditional (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10889:17)
+      at JSXParserMixin.parseMaybeAssign (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10835:21)
+      at JSXParserMixin.parseExpressionBase (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10788:23)
+      at /Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10784:39
+      at JSXParserMixin.allowInAnd (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12436:12)
+      at JSXParserMixin.parseExpression (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10784:17)
+      at JSXParserMixin.jsxParseExpressionContainer (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:4665:31)
+      at JSXParserMixin.jsxParseElementAt (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:4744:36)
+      at JSXParserMixin.jsxParseElementAt (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:4731:32)
+      at JSXParserMixin.jsxParseElementAt (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:4731:32)
+      at JSXParserMixin.jsxParseElementAt (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:4731:32)
+      at JSXParserMixin.jsxParseElementAt (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:4731:32)
+      at JSXParserMixin.jsxParseElement (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:4782:17)
+      at JSXParserMixin.parseExprAtom (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:4792:19)
+      at JSXParserMixin.parseExprSubscripts (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11085:23)
+      at JSXParserMixin.parseUpdate (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11070:21)
+      at JSXParserMixin.parseMaybeUnary (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11050:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10903:61)
+      at JSXParserMixin.parseExprOps (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10908:23)
+      at JSXParserMixin.parseMaybeConditional (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10885:23)
+      at JSXParserMixin.parseMaybeAssign (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10835:21)
+      at /Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10804:39
+      at JSXParserMixin.allowInAnd (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12436:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10804:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12503:17)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11683:28)
+      at JSXParserMixin.parseExprAtom (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11335:23)
+      at JSXParserMixin.parseExprAtom (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:4797:20)
+      at JSXParserMixin.parseExprSubscripts (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11085:23)
+      at JSXParserMixin.parseUpdate (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11070:21)
+      at JSXParserMixin.parseMaybeUnary (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11050:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10903:61)
+2:55:34 PM [vite] (client) Pre-transform error: /Users/rampareek/Desktop/Library-Management-System-main/frontend/src/components/Expenses.jsx: Unexpected token, expected "," (214:16)
+
+  212 |                   </td>
+  213 |                 </tr>
+> 214 |               ))}
+      |                 ^
+  215 |             </tbody>
+  216 |           </table>
+  217 |         </div>
+  Plugin: vite:react-babel
+  File: /Users/rampareek/Desktop/Library-Management-System-main/frontend/src/components/Expenses.jsx:214:16
+  212 |                    </td>
+  213 |                  </tr>
+  214 |                ))}
+      |                  ^
+  215 |              </tbody>
+  216 |            </table>
+2:55:34 PM [vite] Internal server error: /Users/rampareek/Desktop/Library-Management-System-main/frontend/src/components/Expenses.jsx: Unexpected token, expected "," (214:16)
+
+  212 |                   </td>
+  213 |                 </tr>
+> 214 |               ))}
+      |                 ^
+  215 |             </tbody>
+  216 |           </table>
+  217 |         </div>
+  Plugin: vite:react-babel
+  File: /Users/rampareek/Desktop/Library-Management-System-main/frontend/src/components/Expenses.jsx:214:16
+  212 |                    </td>
+  213 |                  </tr>
+  214 |                ))}
+      |                  ^
+  215 |              </tbody>
+  216 |            </table>
+      at constructor (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:367:19)
+      at JSXParserMixin.raise (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:6630:19)
+      at JSXParserMixin.unexpected (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:6650:16)
+      at JSXParserMixin.expect (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:6930:12)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11669:14)
+      at JSXParserMixin.parseExprAtom (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11335:23)
+      at JSXParserMixin.parseExprAtom (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:4797:20)
+      at JSXParserMixin.parseExprSubscripts (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11085:23)
+      at JSXParserMixin.parseUpdate (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11070:21)
+      at JSXParserMixin.parseMaybeUnary (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11050:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10903:61)
+      at JSXParserMixin.parseExprOps (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10908:23)
+      at JSXParserMixin.parseMaybeConditional (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10885:23)
+      at JSXParserMixin.parseMaybeAssign (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10835:21)
+      at JSXParserMixin.parseConditional (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10897:29)
+      at JSXParserMixin.parseMaybeConditional (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10889:17)
+      at JSXParserMixin.parseMaybeAssign (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10835:21)
+      at JSXParserMixin.parseConditional (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10897:29)
+      at JSXParserMixin.parseMaybeConditional (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10889:17)
+      at JSXParserMixin.parseMaybeAssign (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10835:21)
+      at JSXParserMixin.parseExpressionBase (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10788:23)
+      at /Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10784:39
+      at JSXParserMixin.allowInAnd (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12436:12)
+      at JSXParserMixin.parseExpression (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10784:17)
+      at JSXParserMixin.jsxParseExpressionContainer (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:4665:31)
+      at JSXParserMixin.jsxParseElementAt (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:4744:36)
+      at JSXParserMixin.jsxParseElementAt (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:4731:32)
+      at JSXParserMixin.jsxParseElementAt (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:4731:32)
+      at JSXParserMixin.jsxParseElementAt (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:4731:32)
+      at JSXParserMixin.jsxParseElementAt (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:4731:32)
+      at JSXParserMixin.jsxParseElement (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:4782:17)
+      at JSXParserMixin.parseExprAtom (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:4792:19)
+      at JSXParserMixin.parseExprSubscripts (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11085:23)
+      at JSXParserMixin.parseUpdate (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11070:21)
+      at JSXParserMixin.parseMaybeUnary (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11050:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10903:61)
+      at JSXParserMixin.parseExprOps (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10908:23)
+      at JSXParserMixin.parseMaybeConditional (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10885:23)
+      at JSXParserMixin.parseMaybeAssign (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10835:21)
+      at /Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10804:39
+      at JSXParserMixin.allowInAnd (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12436:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10804:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12503:17)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11683:28)
+      at JSXParserMixin.parseExprAtom (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11335:23)
+      at JSXParserMixin.parseExprAtom (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:4797:20)
+      at JSXParserMixin.parseExprSubscripts (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11085:23)
+      at JSXParserMixin.parseUpdate (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11070:21)
+      at JSXParserMixin.parseMaybeUnary (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11050:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10903:61)
+2:55:36 PM [vite] (client) hmr update /src/components/Expenses.jsx, /src/index.css
+2:55:56 PM [vite] (client) hmr update /src/components/Alerts.jsx, /src/index.css
+2:55:56 PM [vite] Internal server error: /Users/rampareek/Desktop/Library-Management-System-main/frontend/src/components/Alerts.jsx: Missing semicolon. (35:10)
+
+  33 |     {
+  34 |       id: 3,
+> 35 |       type: 'success',
+     |           ^
+  36 |       title: 'Payment Received',
+  37 |       message: 'Mike Johnson has paid ₹3,000 for this month',
+  38 |       time: '6 hours ago',
+  Plugin: vite:react-babel
+  File: /Users/rampareek/Desktop/Library-Management-System-main/frontend/src/components/Alerts.jsx:35:10
+  33 |      {
+  34 |        id: 3,
+  35 |        type: 'success',
+     |            ^
+  36 |        title: 'Payment Received',
+  37 |        message: 'Mike Johnson has paid ₹3,000 for this month',
+      at constructor (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:367:19)
+      at JSXParserMixin.raise (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:6630:19)
+      at JSXParserMixin.semicolon (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:6926:10)
+      at JSXParserMixin.parseExpressionStatement (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13294:10)
+      at JSXParserMixin.parseStatementContent (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12908:19)
+      at JSXParserMixin.parseStatementLike (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12776:17)
+      at JSXParserMixin.parseStatement (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12769:17)
+      at JSXParserMixin.parseLabeledStatement (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13287:95)
+      at JSXParserMixin.parseStatementContent (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12906:19)
+      at JSXParserMixin.parseStatementLike (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12776:17)
+      at JSXParserMixin.parseStatementListItem (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12756:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13325:61)
+      at JSXParserMixin.parseBlockBody (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13318:10)
+      at JSXParserMixin.parseBlock (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13306:10)
+      at JSXParserMixin.parseStatementContent (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12867:21)
+      at JSXParserMixin.parseStatementLike (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12776:17)
+      at JSXParserMixin.parseStatementListItem (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12756:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13325:61)
+      at JSXParserMixin.parseBlockBody (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13318:10)
+      at JSXParserMixin.parseBlock (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13306:10)
+      at JSXParserMixin.parseFunctionBody (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12110:24)
+      at JSXParserMixin.parseArrowExpression (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12085:10)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11695:12)
+      at JSXParserMixin.parseExprAtom (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11335:23)
+      at JSXParserMixin.parseExprAtom (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:4797:20)
+      at JSXParserMixin.parseExprSubscripts (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11085:23)
+      at JSXParserMixin.parseUpdate (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11070:21)
+      at JSXParserMixin.parseMaybeUnary (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11050:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10903:61)
+      at JSXParserMixin.parseExprOps (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10908:23)
+      at JSXParserMixin.parseMaybeConditional (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10885:23)
+      at JSXParserMixin.parseMaybeAssign (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10835:21)
+      at /Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10804:39
+      at JSXParserMixin.allowInAnd (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12431:16)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10804:17)
+      at JSXParserMixin.parseVar (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13393:91)
+      at JSXParserMixin.parseVarStatement (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13239:10)
+      at JSXParserMixin.parseStatementContent (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12860:23)
+      at JSXParserMixin.parseStatementLike (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12776:17)
+      at JSXParserMixin.parseModuleItem (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12753:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13325:36)
+      at JSXParserMixin.parseBlockBody (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13318:10)
+      at JSXParserMixin.parseProgram (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12634:10)
+      at JSXParserMixin.parseTopLevel (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12624:25)
+      at JSXParserMixin.parse (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:14501:10)
+      at parse (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:14535:38)
+      at parser (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/core/lib/parser/index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/core/lib/transformation/normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+2:57:09 PM [vite] (client) Pre-transform error: /Users/rampareek/Desktop/Library-Management-System-main/frontend/src/components/Alerts.jsx: Missing semicolon. (35:10)
+
+  33 |     {
+  34 |       id: 3,
+> 35 |       type: 'success',
+     |           ^
+  36 |       title: 'Payment Received',
+  37 |       message: 'Mike Johnson has paid ₹3,000 for this month',
+  38 |       time: '6 hours ago',
+  Plugin: vite:react-babel
+  File: /Users/rampareek/Desktop/Library-Management-System-main/frontend/src/components/Alerts.jsx:35:10
+  33 |      {
+  34 |        id: 3,
+  35 |        type: 'success',
+     |            ^
+  36 |        title: 'Payment Received',
+  37 |        message: 'Mike Johnson has paid ₹3,000 for this month',
+2:57:09 PM [vite] Internal server error: /Users/rampareek/Desktop/Library-Management-System-main/frontend/src/components/Alerts.jsx: Missing semicolon. (35:10)
+
+  33 |     {
+  34 |       id: 3,
+> 35 |       type: 'success',
+     |           ^
+  36 |       title: 'Payment Received',
+  37 |       message: 'Mike Johnson has paid ₹3,000 for this month',
+  38 |       time: '6 hours ago',
+  Plugin: vite:react-babel
+  File: /Users/rampareek/Desktop/Library-Management-System-main/frontend/src/components/Alerts.jsx:35:10
+  33 |      {
+  34 |        id: 3,
+  35 |        type: 'success',
+     |            ^
+  36 |        title: 'Payment Received',
+  37 |        message: 'Mike Johnson has paid ₹3,000 for this month',
+      at constructor (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:367:19)
+      at JSXParserMixin.raise (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:6630:19)
+      at JSXParserMixin.semicolon (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:6926:10)
+      at JSXParserMixin.parseExpressionStatement (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13294:10)
+      at JSXParserMixin.parseStatementContent (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12908:19)
+      at JSXParserMixin.parseStatementLike (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12776:17)
+      at JSXParserMixin.parseStatement (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12769:17)
+      at JSXParserMixin.parseLabeledStatement (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13287:95)
+      at JSXParserMixin.parseStatementContent (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12906:19)
+      at JSXParserMixin.parseStatementLike (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12776:17)
+      at JSXParserMixin.parseStatementListItem (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12756:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13325:61)
+      at JSXParserMixin.parseBlockBody (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13318:10)
+      at JSXParserMixin.parseBlock (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13306:10)
+      at JSXParserMixin.parseStatementContent (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12867:21)
+      at JSXParserMixin.parseStatementLike (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12776:17)
+      at JSXParserMixin.parseStatementListItem (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12756:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13325:61)
+      at JSXParserMixin.parseBlockBody (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13318:10)
+      at JSXParserMixin.parseBlock (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13306:10)
+      at JSXParserMixin.parseFunctionBody (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12110:24)
+      at JSXParserMixin.parseArrowExpression (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12085:10)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11695:12)
+      at JSXParserMixin.parseExprAtom (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11335:23)
+      at JSXParserMixin.parseExprAtom (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:4797:20)
+      at JSXParserMixin.parseExprSubscripts (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11085:23)
+      at JSXParserMixin.parseUpdate (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11070:21)
+      at JSXParserMixin.parseMaybeUnary (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11050:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10903:61)
+      at JSXParserMixin.parseExprOps (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10908:23)
+      at JSXParserMixin.parseMaybeConditional (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10885:23)
+      at JSXParserMixin.parseMaybeAssign (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10835:21)
+      at /Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10804:39
+      at JSXParserMixin.allowInAnd (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12431:16)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10804:17)
+      at JSXParserMixin.parseVar (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13393:91)
+      at JSXParserMixin.parseVarStatement (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13239:10)
+      at JSXParserMixin.parseStatementContent (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12860:23)
+      at JSXParserMixin.parseStatementLike (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12776:17)
+      at JSXParserMixin.parseModuleItem (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12753:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13325:36)
+      at JSXParserMixin.parseBlockBody (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13318:10)
+      at JSXParserMixin.parseProgram (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12634:10)
+      at JSXParserMixin.parseTopLevel (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12624:25)
+      at JSXParserMixin.parse (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:14501:10)
+      at parse (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:14535:38)
+      at parser (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/core/lib/parser/index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/core/lib/transformation/normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+2:57:12 PM [vite] Internal server error: /Users/rampareek/Desktop/Library-Management-System-main/frontend/src/components/Alerts.jsx: Missing semicolon. (35:10)
+
+  33 |     {
+  34 |       id: 3,
+> 35 |       type: 'success',
+     |           ^
+  36 |       title: 'Payment Received',
+  37 |       message: 'Mike Johnson has paid ₹3,000 for this month',
+  38 |       time: '6 hours ago',
+  Plugin: vite:react-babel
+  File: /Users/rampareek/Desktop/Library-Management-System-main/frontend/src/components/Alerts.jsx:35:10
+  33 |      {
+  34 |        id: 3,
+  35 |        type: 'success',
+     |            ^
+  36 |        title: 'Payment Received',
+  37 |        message: 'Mike Johnson has paid ₹3,000 for this month',
+      at constructor (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:367:19)
+      at JSXParserMixin.raise (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:6630:19)
+      at JSXParserMixin.semicolon (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:6926:10)
+      at JSXParserMixin.parseExpressionStatement (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13294:10)
+      at JSXParserMixin.parseStatementContent (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12908:19)
+      at JSXParserMixin.parseStatementLike (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12776:17)
+      at JSXParserMixin.parseStatement (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12769:17)
+      at JSXParserMixin.parseLabeledStatement (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13287:95)
+      at JSXParserMixin.parseStatementContent (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12906:19)
+      at JSXParserMixin.parseStatementLike (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12776:17)
+      at JSXParserMixin.parseStatementListItem (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12756:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13325:61)
+      at JSXParserMixin.parseBlockBody (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13318:10)
+      at JSXParserMixin.parseBlock (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13306:10)
+      at JSXParserMixin.parseStatementContent (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12867:21)
+      at JSXParserMixin.parseStatementLike (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12776:17)
+      at JSXParserMixin.parseStatementListItem (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12756:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13325:61)
+      at JSXParserMixin.parseBlockBody (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13318:10)
+      at JSXParserMixin.parseBlock (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13306:10)
+      at JSXParserMixin.parseFunctionBody (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12110:24)
+      at JSXParserMixin.parseArrowExpression (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12085:10)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11695:12)
+      at JSXParserMixin.parseExprAtom (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11335:23)
+      at JSXParserMixin.parseExprAtom (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:4797:20)
+      at JSXParserMixin.parseExprSubscripts (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11085:23)
+      at JSXParserMixin.parseUpdate (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11070:21)
+      at JSXParserMixin.parseMaybeUnary (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11050:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10903:61)
+      at JSXParserMixin.parseExprOps (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10908:23)
+      at JSXParserMixin.parseMaybeConditional (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10885:23)
+      at JSXParserMixin.parseMaybeAssign (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10835:21)
+      at /Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10804:39
+      at JSXParserMixin.allowInAnd (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12431:16)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10804:17)
+      at JSXParserMixin.parseVar (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13393:91)
+      at JSXParserMixin.parseVarStatement (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13239:10)
+      at JSXParserMixin.parseStatementContent (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12860:23)
+      at JSXParserMixin.parseStatementLike (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12776:17)
+      at JSXParserMixin.parseModuleItem (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12753:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13325:36)
+      at JSXParserMixin.parseBlockBody (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13318:10)
+      at JSXParserMixin.parseProgram (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12634:10)
+      at JSXParserMixin.parseTopLevel (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12624:25)
+      at JSXParserMixin.parse (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:14501:10)
+      at parse (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:14535:38)
+      at parser (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/core/lib/parser/index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/core/lib/transformation/normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+2:57:16 PM [vite] Internal server error: /Users/rampareek/Desktop/Library-Management-System-main/frontend/src/components/Alerts.jsx: Missing semicolon. (35:10)
+
+  33 |     {
+  34 |       id: 3,
+> 35 |       type: 'success',
+     |           ^
+  36 |       title: 'Payment Received',
+  37 |       message: 'Mike Johnson has paid ₹3,000 for this month',
+  38 |       time: '6 hours ago',
+  Plugin: vite:react-babel
+  File: /Users/rampareek/Desktop/Library-Management-System-main/frontend/src/components/Alerts.jsx:35:10
+  33 |      {
+  34 |        id: 3,
+  35 |        type: 'success',
+     |            ^
+  36 |        title: 'Payment Received',
+  37 |        message: 'Mike Johnson has paid ₹3,000 for this month',
+      at constructor (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:367:19)
+      at JSXParserMixin.raise (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:6630:19)
+      at JSXParserMixin.semicolon (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:6926:10)
+      at JSXParserMixin.parseExpressionStatement (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13294:10)
+      at JSXParserMixin.parseStatementContent (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12908:19)
+      at JSXParserMixin.parseStatementLike (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12776:17)
+      at JSXParserMixin.parseStatement (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12769:17)
+      at JSXParserMixin.parseLabeledStatement (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13287:95)
+      at JSXParserMixin.parseStatementContent (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12906:19)
+      at JSXParserMixin.parseStatementLike (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12776:17)
+      at JSXParserMixin.parseStatementListItem (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12756:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13325:61)
+      at JSXParserMixin.parseBlockBody (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13318:10)
+      at JSXParserMixin.parseBlock (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13306:10)
+      at JSXParserMixin.parseStatementContent (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12867:21)
+      at JSXParserMixin.parseStatementLike (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12776:17)
+      at JSXParserMixin.parseStatementListItem (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12756:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13325:61)
+      at JSXParserMixin.parseBlockBody (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13318:10)
+      at JSXParserMixin.parseBlock (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13306:10)
+      at JSXParserMixin.parseFunctionBody (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12110:24)
+      at JSXParserMixin.parseArrowExpression (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12085:10)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11695:12)
+      at JSXParserMixin.parseExprAtom (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11335:23)
+      at JSXParserMixin.parseExprAtom (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:4797:20)
+      at JSXParserMixin.parseExprSubscripts (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11085:23)
+      at JSXParserMixin.parseUpdate (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11070:21)
+      at JSXParserMixin.parseMaybeUnary (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11050:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10903:61)
+      at JSXParserMixin.parseExprOps (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10908:23)
+      at JSXParserMixin.parseMaybeConditional (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10885:23)
+      at JSXParserMixin.parseMaybeAssign (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10835:21)
+      at /Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10804:39
+      at JSXParserMixin.allowInAnd (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12431:16)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10804:17)
+      at JSXParserMixin.parseVar (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13393:91)
+      at JSXParserMixin.parseVarStatement (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13239:10)
+      at JSXParserMixin.parseStatementContent (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12860:23)
+      at JSXParserMixin.parseStatementLike (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12776:17)
+      at JSXParserMixin.parseModuleItem (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12753:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13325:36)
+      at JSXParserMixin.parseBlockBody (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13318:10)
+      at JSXParserMixin.parseProgram (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12634:10)
+      at JSXParserMixin.parseTopLevel (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12624:25)
+      at JSXParserMixin.parse (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:14501:10)
+      at parse (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:14535:38)
+      at parser (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/core/lib/parser/index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/core/lib/transformation/normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+2:57:24 PM [vite] Internal server error: /Users/rampareek/Desktop/Library-Management-System-main/frontend/src/components/Alerts.jsx: Missing semicolon. (35:10)
+
+  33 |     {
+  34 |       id: 3,
+> 35 |       type: 'success',
+     |           ^
+  36 |       title: 'Payment Received',
+  37 |       message: 'Mike Johnson has paid ₹3,000 for this month',
+  38 |       time: '6 hours ago',
+  Plugin: vite:react-babel
+  File: /Users/rampareek/Desktop/Library-Management-System-main/frontend/src/components/Alerts.jsx:35:10
+  33 |      {
+  34 |        id: 3,
+  35 |        type: 'success',
+     |            ^
+  36 |        title: 'Payment Received',
+  37 |        message: 'Mike Johnson has paid ₹3,000 for this month',
+      at constructor (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:367:19)
+      at JSXParserMixin.raise (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:6630:19)
+      at JSXParserMixin.semicolon (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:6926:10)
+      at JSXParserMixin.parseExpressionStatement (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13294:10)
+      at JSXParserMixin.parseStatementContent (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12908:19)
+      at JSXParserMixin.parseStatementLike (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12776:17)
+      at JSXParserMixin.parseStatement (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12769:17)
+      at JSXParserMixin.parseLabeledStatement (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13287:95)
+      at JSXParserMixin.parseStatementContent (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12906:19)
+      at JSXParserMixin.parseStatementLike (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12776:17)
+      at JSXParserMixin.parseStatementListItem (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12756:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13325:61)
+      at JSXParserMixin.parseBlockBody (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13318:10)
+      at JSXParserMixin.parseBlock (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13306:10)
+      at JSXParserMixin.parseStatementContent (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12867:21)
+      at JSXParserMixin.parseStatementLike (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12776:17)
+      at JSXParserMixin.parseStatementListItem (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12756:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13325:61)
+      at JSXParserMixin.parseBlockBody (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13318:10)
+      at JSXParserMixin.parseBlock (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13306:10)
+      at JSXParserMixin.parseFunctionBody (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12110:24)
+      at JSXParserMixin.parseArrowExpression (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12085:10)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11695:12)
+      at JSXParserMixin.parseExprAtom (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11335:23)
+      at JSXParserMixin.parseExprAtom (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:4797:20)
+      at JSXParserMixin.parseExprSubscripts (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11085:23)
+      at JSXParserMixin.parseUpdate (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11070:21)
+      at JSXParserMixin.parseMaybeUnary (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11050:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10903:61)
+      at JSXParserMixin.parseExprOps (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10908:23)
+      at JSXParserMixin.parseMaybeConditional (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10885:23)
+      at JSXParserMixin.parseMaybeAssign (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10835:21)
+      at /Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10804:39
+      at JSXParserMixin.allowInAnd (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12431:16)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10804:17)
+      at JSXParserMixin.parseVar (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13393:91)
+      at JSXParserMixin.parseVarStatement (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13239:10)
+      at JSXParserMixin.parseStatementContent (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12860:23)
+      at JSXParserMixin.parseStatementLike (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12776:17)
+      at JSXParserMixin.parseModuleItem (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12753:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13325:36)
+      at JSXParserMixin.parseBlockBody (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13318:10)
+      at JSXParserMixin.parseProgram (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12634:10)
+      at JSXParserMixin.parseTopLevel (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12624:25)
+      at JSXParserMixin.parse (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:14501:10)
+      at parse (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:14535:38)
+      at parser (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/core/lib/parser/index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/core/lib/transformation/normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+2:58:00 PM [vite] Internal server error: /Users/rampareek/Desktop/Library-Management-System-main/frontend/src/components/Alerts.jsx: Missing semicolon. (35:10)
+
+  33 |     {
+  34 |       id: 3,
+> 35 |       type: 'success',
+     |           ^
+  36 |       title: 'Payment Received',
+  37 |       message: 'Mike Johnson has paid ₹3,000 for this month',
+  38 |       time: '6 hours ago',
+  Plugin: vite:react-babel
+  File: /Users/rampareek/Desktop/Library-Management-System-main/frontend/src/components/Alerts.jsx:35:10
+  33 |      {
+  34 |        id: 3,
+  35 |        type: 'success',
+     |            ^
+  36 |        title: 'Payment Received',
+  37 |        message: 'Mike Johnson has paid ₹3,000 for this month',
+      at constructor (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:367:19)
+      at JSXParserMixin.raise (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:6630:19)
+      at JSXParserMixin.semicolon (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:6926:10)
+      at JSXParserMixin.parseExpressionStatement (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13294:10)
+      at JSXParserMixin.parseStatementContent (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12908:19)
+      at JSXParserMixin.parseStatementLike (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12776:17)
+      at JSXParserMixin.parseStatement (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12769:17)
+      at JSXParserMixin.parseLabeledStatement (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13287:95)
+      at JSXParserMixin.parseStatementContent (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12906:19)
+      at JSXParserMixin.parseStatementLike (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12776:17)
+      at JSXParserMixin.parseStatementListItem (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12756:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13325:61)
+      at JSXParserMixin.parseBlockBody (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13318:10)
+      at JSXParserMixin.parseBlock (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13306:10)
+      at JSXParserMixin.parseStatementContent (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12867:21)
+      at JSXParserMixin.parseStatementLike (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12776:17)
+      at JSXParserMixin.parseStatementListItem (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12756:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13325:61)
+      at JSXParserMixin.parseBlockBody (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13318:10)
+      at JSXParserMixin.parseBlock (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13306:10)
+      at JSXParserMixin.parseFunctionBody (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12110:24)
+      at JSXParserMixin.parseArrowExpression (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12085:10)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11695:12)
+      at JSXParserMixin.parseExprAtom (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11335:23)
+      at JSXParserMixin.parseExprAtom (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:4797:20)
+      at JSXParserMixin.parseExprSubscripts (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11085:23)
+      at JSXParserMixin.parseUpdate (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11070:21)
+      at JSXParserMixin.parseMaybeUnary (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:11050:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10903:61)
+      at JSXParserMixin.parseExprOps (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10908:23)
+      at JSXParserMixin.parseMaybeConditional (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10885:23)
+      at JSXParserMixin.parseMaybeAssign (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10835:21)
+      at /Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10804:39
+      at JSXParserMixin.allowInAnd (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12431:16)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:10804:17)
+      at JSXParserMixin.parseVar (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13393:91)
+      at JSXParserMixin.parseVarStatement (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13239:10)
+      at JSXParserMixin.parseStatementContent (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12860:23)
+      at JSXParserMixin.parseStatementLike (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12776:17)
+      at JSXParserMixin.parseModuleItem (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12753:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13325:36)
+      at JSXParserMixin.parseBlockBody (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:13318:10)
+      at JSXParserMixin.parseProgram (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12634:10)
+      at JSXParserMixin.parseTopLevel (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:12624:25)
+      at JSXParserMixin.parse (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:14501:10)
+      at parse (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/parser/lib/index.js:14535:38)
+      at parser (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/core/lib/parser/index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (/Users/rampareek/Desktop/Library-Management-System-main/frontend/node_modules/@babel/core/lib/transformation/normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+2:59:47 PM [vite] (client) hmr update /src/components/Alerts.jsx, /src/index.css
