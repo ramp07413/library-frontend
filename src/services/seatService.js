@@ -31,8 +31,8 @@ export const seatService = {
     return response.data;
   },
 
-  unassignSeat: async (seatId) => {
-    const response = await api.put(`/seats/${seatId}/unassign`, {});
+  unassignSeat: async (seatId, studentId) => {
+    const response = await api.put(`/seats/${seatId}/unassign`, { studentId });
     return response.data;
   },
 

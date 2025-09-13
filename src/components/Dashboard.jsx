@@ -31,14 +31,15 @@ ChartJS.register(
 
 
 const Dashboard = () => {
-  const { stats, isLoading, fetchDashboardData } = useDashboardStore();
+  const { stats, isLoading, fetchDashboardData, studentShiftDistribution, fetchStudentShiftDistribution } = useDashboardStore();
   const { hasPermission } = useAuthStore();
 
   useEffect(() => {
     if (hasPermission('dashboard', 'read')) {
       fetchDashboardData();
+      fetchStudentShiftDistribution();
     }
-  }, [fetchDashboardData, hasPermission]);
+  }, [fetchDashboardData, fetchStudentShiftDistribution, hasPermission]);
 
   if (!hasPermission('dashboard', 'read')) {
     return (
@@ -124,11 +125,11 @@ const Dashboard = () => {
   }
 
   const distributionData = {
-    labels: ['Morning', 'Afternoon', 'Evening', 'Night'],
+    labels: studentShiftDistribution?.map(item => item.shift) || [],
     datasets: [
       {
         label: 'Students',
-        data: [45, 35, 50, 26],
+        data: studentShiftDistribution?.map(item => item.count) || [],
         backgroundColor: [
           'rgba(59, 130, 246, 0.8)',
           'rgba(16, 185, 129, 0.8)',
@@ -213,7 +214,11 @@ const Dashboard = () => {
         <div className="bg-white rounded-xl shadow-sm p-6">
           <h3 className="text-lg font-semibold text-gray-900 mb-4">Student Timing Distribution</h3>
           <div className="h-80">
-            <Doughnut data={distributionData} options={distributionOptions} />
+            {studentShiftDistribution && studentShiftDistribution.length > 0 ? (
+              <Doughnut data={distributionData} options={distributionOptions} />
+            ) : (
+              <p>No student shift data available.</p>
+            )}
           </div>
         </div>
       </div>

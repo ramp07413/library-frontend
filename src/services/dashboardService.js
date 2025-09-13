@@ -9,5 +9,10 @@ export const dashboardService = {
   getRevenueAnalytics: async () => {
     const response = await api.get('/dashboard/revenue-analytics');
     return response.data;
+  },
+
+  getStudentShiftDistribution: async () => {
+    const response = await api.get('/students');
+    return response.data;
   }
 };

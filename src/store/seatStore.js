@@ -64,9 +64,9 @@ export const useSeatStore = create((set, get) => ({
     }
   },
 
-  unassignSeat: async (seatId) => {
+  unassignSeat: async (seatId, studentId) => {
     try {
-      const response = await seatService.unassignSeat(seatId);
+      const response = await seatService.unassignSeat(seatId, studentId);
       const updatedSeat = response.seat || response;
       set({
         seats: get().seats.map(s => s._id === seatId ? updatedSeat : s)

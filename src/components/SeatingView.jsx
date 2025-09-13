@@ -20,9 +20,10 @@ const SeatingView = () => {
   const [newSeatNumber, setNewSeatNumber] = useState('')
   const [deleteSeatNumber, setDeleteSeatNumber] = useState('')
   const [seatTiming, setSeatTiming] = useState('full')
-  const [stats, setStats] = useState({ 
-    totalSeats: 0, 
-    occupiedSeats: 0, 
+  const [studentToUnassign, setStudentToUnassign] = useState('')
+  const [stats, setStats] = useState({
+    totalSeats: 0,
+    occupiedSeats: 0,
     availableSeats: 0,
     halfseat: 0,
     fullseat: 0
@@ -62,9 +63,11 @@ const SeatingView = () => {
     }
 
     setSelectedSeat(seat)
-    
-    // Check if seat is occupied
+
     if (seat.occupied === true) {
+      setSeatNumberInput('')
+      setShowUnassignModal(true)
+    } else if (seat.seatOcupiedTiming === 'half') {
       setSeatNumberInput('')
       setShowUnassignModal(true)
     } else {
@@ -101,7 +104,7 @@ const SeatingView = () => {
       return
     }
 
-    const result = await unassignSeat(selectedSeat._id)
+    const result = await unassignSeat(selectedSeat._id, studentToUnassign)
     
     if (result.success) {
       toast.success('Seat unassigned successfully!')
@@ -144,10 +147,10 @@ const SeatingView = () => {
 
   const getSeatColor = (seat) => {
     if (seat.occupied === true) {
-      const timing = seat.seatOcupiedTiming
-      if (timing === 'full') return 'bg-red-600 text-white cursor-pointer hover:bg-red-700'
-      if (timing === 'half') return 'bg-orange-500 text-white cursor-pointer hover:bg-orange-600'
-      return 'bg-red-500 text-white cursor-pointer hover:bg-red-600'
+      return 'bg-red-600 text-white cursor-pointer hover:bg-red-700'
+    }
+    if (seat.seatOcupiedTiming === 'half') {
+      return 'bg-orange-500 text-white cursor-pointer hover:bg-orange-600'
     }
     
     switch (seat.type) {
@@ -159,12 +162,14 @@ const SeatingView = () => {
 
   const getSeatTooltip = (seat) => {
     const isOccupied = seat.occupied === true
-    const studentName = seat.student?.[0]?.studentId?.name || 'Occupied'
+    const studentNames = seat.student?.map(s => s.studentId.name).join(', ') || 'Occupied'
     const timing = seat.seatOcupiedTiming || 'none'
     
     return `Seat ${seat.seatNumber} - ${seat.type || 'regular'} ${
       isOccupied 
-        ? `(${studentName} - ${timing}) - Click to Unassign` 
+        ? `(${studentNames} - ${timing}) - Click to Unassign` 
+        : seat.seatOcupiedTiming === 'half'
+        ? `(${studentNames} - ${timing}) - Click to Assign/Unassign`
         : '(Available) - Click to Assign'
     }`
   }
@@ -220,11 +225,11 @@ const SeatingView = () => {
           <p className="text-2xl font-bold text-green-600 mt-1">{stats.availableSeats}</p>
         </div>
         <div className="bg-white rounded-xl shadow-sm p-4">
-          <h3 className="text-sm font-semibold text-gray-600">Full Day</h3>
+          <h3 className="text-sm font-semibold text-gray-600">Full seat</h3>
           <p className="text-2xl font-bold text-red-600 mt-1">{stats.fullseat}</p>
         </div>
         <div className="bg-white rounded-xl shadow-sm p-4">
-          <h3 className="text-sm font-semibold text-gray-600">Half Day</h3>
+          <h3 className="text-sm font-semibold text-gray-600">Half seat</h3>
           <p className="text-2xl font-bold text-orange-600 mt-1">{stats.halfseat}</p>
         </div>
       </div>
@@ -237,21 +242,14 @@ const SeatingView = () => {
             <div className="w-6 h-6 bg-green-200 rounded border"></div>
             <span className="text-sm">Available Regular</span>
           </div>
-          <div className="flex items-center space-x-2">
-            <div className="w-6 h-6 bg-yellow-200 rounded border"></div>
-            <span className="text-sm">Available Premium</span>
-          </div>
-          <div className="flex items-center space-x-2">
-            <div className="w-6 h-6 bg-purple-200 rounded border"></div>
-            <span className="text-sm">Available VIP</span>
-          </div>
+
           <div className="flex items-center space-x-2">
             <div className="w-6 h-6 bg-red-600 rounded border"></div>
-            <span className="text-sm text-white">Full Day Occupied</span>
+            <span className="text-sm text-black">Full Day Occupied</span>
           </div>
           <div className="flex items-center space-x-2">
             <div className="w-6 h-6 bg-orange-500 rounded border"></div>
-            <span className="text-sm text-white">Half Day Occupied</span>
+            <span className="text-sm text-black">Half Day Occupied</span>
           </div>
         </div>
       </div>
@@ -364,7 +362,23 @@ const SeatingView = () => {
               <div className="bg-gray-50 p-3 rounded">
                 <p><strong>Seat Number:</strong> {selectedSeat.seatNumber}</p>
                 <p><strong>Type:</strong> {selectedSeat.seatOcupiedTiming || 'none'}</p>
-                <p><strong>Assigned to:</strong> {selectedSeat.student?.[0]?.studentId?.name || 'Unknown'}</p>
+                <p><strong>Assigned to:</strong> {selectedSeat.student?.map(s => s.studentId.name).join(', ') || 'Unknown'}</p>
+              </div>
+              <div>
+                <label className="block text-sm font-medium mb-1">Select Student to Unassign</label>
+                <select
+                  value={studentToUnassign}
+                  onChange={(e) => setStudentToUnassign(e.target.value)}
+                  className="w-full border rounded px-3 py-2"
+                  required
+                >
+                  <option value="">Select a student...</option>
+                  {selectedSeat.student?.map(s => (
+                    <option key={s.studentId._id} value={s.studentId._id}>
+                      {s.studentId.name}
+                    </option>
+                  ))}
+                </select>
               </div>
               <div>
                 <p className="text-sm text-gray-600 mb-2">
@@ -381,10 +395,20 @@ const SeatingView = () => {
               <div className="flex space-x-2">
                 <button
                   onClick={handleUnassignSeat}
-                  disabled={seatNumberInput !== selectedSeat.seatNumber.toString()}
+                  disabled={seatNumberInput !== selectedSeat.seatNumber.toString() || !studentToUnassign}
                   className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   Unassign Seat
+                </button>
+                <button
+                  onClick={() => {
+                    setShowUnassignModal(false)
+                    setSelectedStudent('')
+                    setShowAssignModal(true)
+                  }}
+                  className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                >
+                  Assign Seat
                 </button>
                 <button
                   onClick={() => setShowUnassignModal(false)}
