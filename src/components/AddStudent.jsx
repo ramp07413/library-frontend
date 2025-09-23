@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { FaUser, FaPhone, FaEnvelope, FaMapMarkerAlt, FaCalendarAlt } from 'react-icons/fa'
+import { FaUser, FaPhone, FaEnvelope, FaMapMarkerAlt, FaCalendarAlt,  } from 'react-icons/fa'
+import { RiMoneyRupeeCircleLine } from "react-icons/ri"
 import { useStudentStore } from '../store/studentStore'
 import { useAuthStore } from '../store/authStore'
 
@@ -12,7 +13,10 @@ const AddStudent = () => {
     joinDate: new Date().toISOString().split('T')[0],
     shift: 'morning',
     seatPreference: 'any',
-    monthlyFee: 2500
+    monthlyFee: 2500,
+    endDate:new Date().toDateString().split('T')[0],
+    FatherName:'',
+    PaymentSection:'',
   })
 
   const { createStudent } = useStudentStore()
@@ -30,6 +34,9 @@ const AddStudent = () => {
         joinDate: new Date().toISOString().split('T')[0],
         shift: 'morning',
         seatType: 'select',
+        endDate:new Date().toDateString().split('T')[0],
+         FatherName:'',
+         PaymentSection:'',
       })
     }
   }
@@ -92,6 +99,16 @@ const AddStudent = () => {
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
+                <FaUser className="inline mr-2" />
+                Father Name
+              </label>
+              <input type="text" name='FatherName' value={formData.FatherName}  onChange={handleChange} placeholder="Father's Name"
+               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+               required/>
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
                 <FaPhone className="inline mr-2" />
                 Phone Number
               </label>
@@ -120,7 +137,26 @@ const AddStudent = () => {
                 required
               />
             </div>
+             <div>
+            <label className='block text-sm font-medium text-gray-700 mb-2'>
+              <FaCalendarAlt  className='inline mr-2'/>
+              End Date
+            </label>
+            <input type="date" name="endDate" value={formData.endDate} onChange={handleChange} 
+                  className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent' required />
           </div>
+          </div>
+
+          <div>
+            <label className='block text-sm font-medium text-gray-700 mb-2'>
+              <RiMoneyRupeeCircleLine  className='inline mr-2'/>
+              Fee
+            </label>
+            <input type="text" name='fee' value={formData.fee} onChange={handleChange} 
+               className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent' required />
+          </div>
+
+         
 
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">

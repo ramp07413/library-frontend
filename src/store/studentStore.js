@@ -50,7 +50,8 @@ export const useStudentStore = create((set, get) => ({
       });
       toast.success('Student updated successfully!');
       return { success: true };
-    } catch {
+    } catch(error) {
+      console.log("update error",error)
       return { success: false };
     }
   },

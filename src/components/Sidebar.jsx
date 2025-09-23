@@ -20,9 +20,9 @@ const Sidebar = () => {
     { path: '/add-student', label: 'Add Student', icon: FaUserPlus },
     { path: '/manage-students', label: 'Manage Students', icon: FaUsers },
     { path: '/seating', label: 'Seating View', icon: FaChair },
-    // { path: '/expenses', label: 'Manage Expenses', icon: FaMoneyBillWave },
-    // { path: '/alerts', label: 'Alerts', icon: FaBell },
-    // { path: '/student-payments', label: 'Student Payments', icon: FaFileInvoiceDollar },
+    { path: '/expenses', label: 'Manage Expenses', icon: FaMoneyBillWave },
+    { path: '/alerts', label: 'Alerts', icon: FaBell },
+    { path: '/student-payments', label: 'Student Payments', icon: FaFileInvoiceDollar },
   ]
 
   // Add admin management for admin and super_admin roles
