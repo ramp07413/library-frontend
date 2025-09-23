@@ -50,12 +50,14 @@ const ManageStudents = () => {
       name: student.name,
       email: student.email,
       phone: student.phone,
+      fee : student.fee,
       address: student.address,
       shift: student.shift,
       seatingType : student.seatingType,
       status: student.status,
       Type: student.seatingType
     })
+    console.log("editForm",editForm)
     setShowEditModal(true)
   }
 
@@ -71,6 +73,7 @@ const ManageStudents = () => {
 
   const handleUpdateStudent = async (e) => {
     e.preventDefault()
+    console.log("edit",editForm)
     const result = await updateStudent(selectedStudent._id, editForm)
     if (result.success) {
       // toast.success('Student updated successfully!')
@@ -167,6 +170,7 @@ const ManageStudents = () => {
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Shift</th>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Type</th>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Fee</th>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
               </tr>
             </thead>
@@ -197,6 +201,13 @@ const ManageStudents = () => {
                       student.status === 'active' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
                     }`}>
                       {student.status}
+                    </span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <span className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${
+                      student.fee ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
+                    }`}>
+                      {student.fee}
                     </span>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
@@ -246,7 +257,7 @@ const ManageStudents = () => {
 
       {/* Edit Modal */}
       {showEditModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div className=" fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 ">
           <div className="bg-white rounded-lg p-6 w-full max-w-md">
             <div className="flex justify-between items-center mb-4">
               <h3 className="text-lg font-semibold">Edit Student</h3>
@@ -333,6 +344,16 @@ const ManageStudents = () => {
                   <option value="inactive">Inactive</option>
                 </select>
               </div>
+                <div>
+                <label className="block text-sm font-medium mb-1">Fee</label>
+                <input
+                  type="number"
+                  value={editForm.fee}
+                  onChange={(e) => setEditForm({...editForm, fee: e.target.value})}
+                  className="w-full border rounded px-3 py-2"
+                  
+                />
+              </div>
               <div className="flex space-x-2">
                 <button
                   type="submit"
@@ -376,6 +397,10 @@ const ManageStudents = () => {
                 <label className="block text-sm font-medium text-gray-600">Phone</label>
                 <p className="text-gray-900">{selectedStudent.phone}</p>
               </div>
+              {selectedStudent.fee && (<div>
+                <label className="block text-sm font-medium text-gray-600">fee</label>
+                <p className="text-gray-900">{selectedStudent.fee}</p>
+              </div>) } 
               <div>
                 <label className="block text-sm font-medium text-gray-600">Address</label>
                 <p className="text-gray-900">{selectedStudent.address}</p>
@@ -395,6 +420,10 @@ const ManageStudents = () => {
               <div>
                 <label className="block text-sm font-medium text-gray-600">Joined Date</label>
                 <p className="text-gray-900">{new Date(selectedStudent.createdAt).toLocaleDateString()}</p>
+              </div>
+               <div>
+                <label className="block text-sm font-medium text-gray-600">EndDate</label>
+                <p className="text-gray-900">{new Date(selectedStudent.endDate).toLocaleDateString()}</p>
               </div>
             </div>
             <div className="mt-6">

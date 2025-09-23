@@ -4,9 +4,9 @@ import { usePaymentStore } from '../store/paymentStore'
 import { useAuthStore } from '../store/authStore'
 
 const StudentPayments = () => {
-  const { payments, stats, isLoading, filters, setFilters, fetchPayments, fetchPaymentStats, updatePaymentStatus } = usePaymentStore()
+  const {  stats, isLoading, filters, setFilters, fetchPayments, fetchPaymentStats, updatePaymentStatus } = usePaymentStore()
   const { hasPermission } = useAuthStore()
-
+ console.log(filters)
   useEffect(() => {
     if (hasPermission('payments', 'read')) {
       fetchPayments()
@@ -71,33 +71,34 @@ const StudentPayments = () => {
   //   }
   // ]
 
-  const filteredPayments = payments.filter(payment => {
-    const matchesSearch = payment.studentName.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         payment.studentId.toLowerCase().includes(searchTerm.toLowerCase())
-    const matchesFilter = filterStatus === 'all' || payment.status === filterStatus
-    return matchesSearch && matchesFilter
-  })
+  // const filteredPayments = payments.filter(payment => {
+  //   const matchesSearch = payment.studentName.toLowerCase().includes() ||
+  //                        payment.studentId.toLowerCase().includes()
+  //                        let filterStatus=filters
+  //   const matchesFilter = filterStatus === 'all' || payment.status === filterStatus
+  //   return matchesSearch && matchesFilter
+  // })
+  //   console.log("searchT",payments)
+  // const totalAmount = payments.reduce((sum, payment) => sum + payment.amount, 0)
+  // const paidAmount = payments.filter(p => p.status === 'paid').reduce((sum, payment) => sum + payment.amount, 0)
+  // const pendingAmount = totalAmount - paidAmount
 
-  const totalAmount = payments.reduce((sum, payment) => sum + payment.amount, 0)
-  const paidAmount = payments.filter(p => p.status === 'paid').reduce((sum, payment) => sum + payment.amount, 0)
-  const pendingAmount = totalAmount - paidAmount
-
-  const getStatusBadge = (status) => {
-    switch (status) {
-      case 'paid':
-        return <span className="inline-flex items-center px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800">
-          <FaCheckCircle className="mr-1" /> Paid
-        </span>
-      case 'overdue':
-        return <span className="inline-flex items-center px-2 py-1 text-xs font-semibold rounded-full bg-red-100 text-red-800">
-          <FaExclamationCircle className="mr-1" /> Overdue
-        </span>
-      default:
-        return <span className="inline-flex items-center px-2 py-1 text-xs font-semibold rounded-full bg-yellow-100 text-yellow-800">
-          <FaExclamationCircle className="mr-1" /> Pending
-        </span>
-    }
-  }
+  // const getStatusBadge = (status) => {
+  //   switch (status) {
+  //     case 'paid':
+  //       return <span className="inline-flex items-center px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800">
+  //         <FaCheckCircle className="mr-1" /> Paid
+  //       </span>
+  //     case 'overdue':
+  //       return <span className="inline-flex items-center px-2 py-1 text-xs font-semibold rounded-full bg-red-100 text-red-800">
+  //         <FaExclamationCircle className="mr-1" /> Overdue
+  //       </span>
+  //     default:
+  //       return <span className="inline-flex items-center px-2 py-1 text-xs font-semibold rounded-full bg-yellow-100 text-yellow-800">
+  //         <FaExclamationCircle className="mr-1" /> Pending
+  //       </span>
+  //   }
+  // }
 
   return (
     <div className="space-y-6">
@@ -113,17 +114,17 @@ const StudentPayments = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="bg-white rounded-xl shadow-sm p-6">
           <h3 className="text-lg font-semibold text-gray-900">Total Expected</h3>
-          <p className="text-3xl font-bold text-blue-600 mt-2">₹{totalAmount.toLocaleString()}</p>
+          <p className="text-3xl font-bold text-blue-600 mt-2"></p>
           <span className="text-sm text-gray-500">This month</span>
         </div>
         <div className="bg-white rounded-xl shadow-sm p-6">
           <h3 className="text-lg font-semibold text-gray-900">Amount Collected</h3>
-          <p className="text-3xl font-bold text-green-600 mt-2">₹{paidAmount.toLocaleString()}</p>
-          <span className="text-sm text-gray-500">{Math.round((paidAmount/totalAmount)*100)}% collected</span>
+          <p className="text-3xl font-bold text-green-600 mt-2"></p>
+          <span className="text-sm text-gray-500">% collected</span>
         </div>
         <div className="bg-white rounded-xl shadow-sm p-6">
           <h3 className="text-lg font-semibold text-gray-900">Pending Amount</h3>
-          <p className="text-3xl font-bold text-red-600 mt-2">₹{pendingAmount.toLocaleString()}</p>
+          <p className="text-3xl font-bold text-red-600 mt-2"></p>
           <span className="text-sm text-gray-500">Outstanding</span>
         </div>
       </div>
@@ -136,13 +137,13 @@ const StudentPayments = () => {
             <input
               type="text"
               placeholder="Search by student name or ID..."
-              value={searchTerm}
+              // value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             />
           </div>
           <select
-            value={filterStatus}
+            // value={filterStatus}
             onChange={(e) => setFilterStatus(e.target.value)}
             className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           >
@@ -170,7 +171,7 @@ const StudentPayments = () => {
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
-              {filteredPayments.map((payment) => (
+              {/* {filteredPayments.map((payment) => (
                 <tr key={payment.id} className="hover:bg-gray-50">
                   <td className="px-6 py-4 whitespace-nowrap">
                     <div className="flex items-center">
@@ -211,7 +212,7 @@ const StudentPayments = () => {
                     </div>
                   </td>
                 </tr>
-              ))}
+              ))} */}
             </tbody>
           </table>
         </div>
