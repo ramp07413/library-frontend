@@ -1,32 +1,32 @@
-import { useState, useEffect } from 'react'
+// import { useState, useEffect } from 'react'
 import { FaSearch, FaDownload, FaEye, FaEdit, FaCheckCircle, FaExclamationCircle } from 'react-icons/fa'
-import { usePaymentStore } from '../store/paymentStore'
-import { useAuthStore } from '../store/authStore'
+// import { usePaymentStore } from '../store/paymentStore'
+// import { useAuthStore } from '../store/authStore'
 
 const StudentPayments = () => {
-  const {  stats, isLoading, filters, setFilters, fetchPayments, fetchPaymentStats, updatePaymentStatus } = usePaymentStore()
-  const { hasPermission } = useAuthStore()
- console.log(filters)
-  useEffect(() => {
-    if (hasPermission('payments', 'read')) {
-      fetchPayments()
-      fetchPaymentStats()
-    }
-  }, [fetchPayments, fetchPaymentStats, hasPermission])
+//   const {  stats, isLoading, filters, setFilters, fetchPayments, fetchPaymentStats, updatePaymentStatus } = usePaymentStore()
+//   const { hasPermission } = useAuthStore()
+//  console.log(filters)
+//   useEffect(() => {
+//     if (hasPermission('payments', 'read')) {
+//       fetchPayments()
+//       fetchPaymentStats()
+//     }
+//   }, [fetchPayments, fetchPaymentStats, hasPermission])
 
-  const handleStatusUpdate = async (id, status) => {
-    await updatePaymentStatus(id, { status })
-  }
+//   const handleStatusUpdate = async (id, status) => {
+//     await updatePaymentStatus(id, { status })
+//   }
 
-  if (!hasPermission('payments', 'read')) {
-    return (
-      <div className="p-6">
-        <div className="bg-red-50 border border-red-200 rounded-md p-4">
-          <p className="text-red-800">You don't have permission to view payments.</p>
-        </div>
-      </div>
-    )
-  }
+//   if (!hasPermission('payments', 'read')) {
+//     return (
+//       <div className="p-6">
+//         <div className="bg-red-50 border border-red-200 rounded-md p-4">
+//           <p className="text-red-800">You don't have permission to view payments.</p>
+//         </div>
+//       </div>
+//     )
+//   }
 
   // const payments = [
   //   {

@@ -4,8 +4,9 @@ import { useAlertStore } from '../store/alertStore'
 import { useAuthStore } from '../store/authStore'
 
 const Alerts = () => {
-  const { alerts, isLoading, fetchAlerts, markAsRead, markAllAsRead } = useAlertStore()
+  const { alerts, isLoading, fetchAlerts, markAsRead, markAllAsRead,DeleteAlert } = useAlertStore()
   const { hasPermission } = useAuthStore()
+
 
   useEffect(() => {
     if (hasPermission('alerts', 'read')) {
@@ -14,11 +15,16 @@ const Alerts = () => {
   }, [fetchAlerts, hasPermission])
 
   const handleMarkAsRead = async (id) => {
-    await markAsRead(id)
+    const data=await markAsRead(id)
+    console.log(data)
+  }
+  
+  const handleMarkAllAsRead = async () => {
+    const value=await markAllAsRead()
   }
 
-  const handleMarkAllAsRead = async () => {
-    await markAllAsRead()
+  const handleDeleteAlert = async () =>{
+    const del= await DeleteAlert()
   }
 
   if (!hasPermission('alerts', 'read')) {
@@ -80,7 +86,7 @@ const Alerts = () => {
             </span>
           )}
         </div>
-        <button className="text-blue-600 hover:text-blue-800 font-medium">
+        <button onClick={()=>markAllAsRead()} className="text-blue-600 hover:text-blue-800 font-medium">
           Mark all as read
         </button>
       </div>
@@ -140,6 +146,7 @@ const Alerts = () => {
         <div className="divide-y divide-gray-200">
           {alerts.map((alert) => (
             <div
+              onClick={markAsRead(alert._id)}
               key={alert.id}
               className={`p-6 border-l-4 ${getAlertBg(alert.type, alert.read)} ${
                 !alert.read ? 'font-medium' : ''
@@ -162,7 +169,7 @@ const Alerts = () => {
                   {!alert.read && (
                     <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
                   )}
-                  <button className="text-gray-400 hover:text-gray-600">
+                  <button onClick={()=>DeleteAlert(alert._id)} disabled={isLoading} className="text-gray-400 hover:text-gray-600">
                     <FaTimes />
                   </button>
                 </div>
