@@ -21,8 +21,9 @@ export const useAlertStore = create((set, get) => ({
     try {
       await alertService.markAsRead(id);
       set({
-        alerts: get().alerts.map(a => a._id === id ? {...a, isRead: true} : a)
-        });
+
+        alerts: get().alerts.map(a => a._id === id ? {...a, read: true} : a)
+
       return { success: true };
     } catch {
       return { success: false };
