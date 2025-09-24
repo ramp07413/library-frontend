@@ -146,7 +146,8 @@ const Alerts = () => {
         <div className="divide-y divide-gray-200">
           {alerts.map((alert) => (
             <div
-              onClick={markAsRead(alert._id)}
+              onClick={()=>markAsRead(alert._id)}
+              // onClick={handleMarkAsRead(alert._id)}
               key={alert.id}
               className={`p-6 border-l-4 ${getAlertBg(alert.type, alert.read)} ${
                 !alert.read ? 'font-medium' : ''
