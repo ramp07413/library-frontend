@@ -6,6 +6,7 @@ export const useAlertStore = create((set, get) => ({
   alerts: [],
   isLoading: false,
 
+
   fetchAlerts: async () => {
     set({ isLoading: true });
     try {
@@ -21,7 +22,7 @@ export const useAlertStore = create((set, get) => ({
       await alertService.markAsRead(id);
       set({
         alerts: get().alerts.map(a => a._id === id ? {...a, isRead: true} : a)
-      });
+        });
       return { success: true };
     } catch {
       return { success: false };
@@ -32,12 +33,30 @@ export const useAlertStore = create((set, get) => ({
     try {
       await alertService.markAllAsRead();
       set({
-        alerts: get().alerts.map(a => ({...a, isRead: true}))
+        alerts: get().alerts.map(a => ({...a, read: true}))
       });
+      // const updateAll=get().alerts.map((alert)=>alert.read=true)
       toast.success('All alerts marked as read');
       return { success: true };
     } catch {
       return { success: false };
     }
   },
+    DeleteAlert:async (_id)=>{
+      set({isLoading:true})
+    try {
+      await alertService.delete(_id)
+        
+          const updatealert = get().alerts.filter((alert)=>alert._id !== _id)
+
+          set({alerts : updatealert,isLoading:false})
+    } catch (error) {
+      set({isLoading:true})
+      console.log("jjh",error)
+    }
+    
+  },
+  
 }));
+
+

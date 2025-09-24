@@ -108,7 +108,10 @@ const ManageStudents = () => {
     <div className="space-y-6">
       <div className="flex justify-between items-center">
         <h1 className="text-3xl font-bold text-gray-900">Manage Students</h1>
-        <Link className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors" to={"/add-student"}>
+        <Link
+          className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+          to={"/add-student"}
+        >
           Add New Student
         </Link>
       </div>
@@ -144,7 +147,6 @@ const ManageStudents = () => {
             <option value="all">Type</option>
             <option value="half">half</option>
             <option value="full">full</option>
-           
           </select>
           <select
             value={filters.status}
@@ -164,21 +166,43 @@ const ManageStudents = () => {
           <table className="w-full">
             <thead className="bg-gray-50">
               <tr>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Email</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Phone</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Shift</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Type</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Fee</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  Name
+                </th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  Email
+                </th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  Phone
+                </th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  Seat.No
+                </th>
+
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  Shift
+                </th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  Type
+                </th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  Status
+                </th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  Fee
+                </th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  Actions
+                </th>
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
               {students.map((student) => (
                 <tr key={student._id} className="hover:bg-gray-50">
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="text-sm font-medium text-gray-900">{student.name}</div>
+                    <div className="text-sm font-medium text-gray-900">
+                      {student.name}
+                    </div>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     <div className="text-sm text-gray-900">{student.email}</div>
@@ -187,26 +211,39 @@ const ManageStudents = () => {
                     <div className="text-sm text-gray-900">{student.phone}</div>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
+                    <div className="text-sm text-gray-900">
+                      {student.seatNo}
+                    </div>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
                     <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">
                       {student.shift}
                     </span>
                   </td>
-                   <td className="px-6 py-4 whitespace-nowrap">
+                  <td className="px-6 py-4 whitespace-nowrap">
                     <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">
                       {student.seatingType}
                     </span>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <span className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${
-                      student.status === 'active' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
-                    }`}>
+                    <span
+                      className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${
+                        student.status === "active"
+                          ? "bg-green-100 text-green-800"
+                          : "bg-red-100 text-red-800"
+                      }`}
+                    >
                       {student.status}
                     </span>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <span className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${
-                      student.fee ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
-                    }`}>
+                    <span
+                      className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${
+                        student.fee
+                          ? "bg-green-100 text-green-800"
+                          : "bg-red-100 text-red-800"
+                      }`}
+                    >
                       {student.fee}
                     </span>
                   </td>
@@ -219,7 +256,7 @@ const ManageStudents = () => {
                       >
                         <FaEye />
                       </button>
-                      {hasPermission('students', 'update') && (
+                      {hasPermission("students", "update") && (
                         <>
                           <button
                             onClick={() => handleEdit(student)}
@@ -230,14 +267,26 @@ const ManageStudents = () => {
                           </button>
                           <button
                             onClick={() => toggleStatus(student)}
-                            className={`${student.status === 'active' ? 'text-orange-600 hover:text-orange-900' : 'text-green-600 hover:text-green-900'}`}
-                            title={`${student.status === 'active' ? 'Deactivate' : 'Activate'} Student`}
+                            className={`${
+                              student.status === "active"
+                                ? "text-orange-600 hover:text-orange-900"
+                                : "text-green-600 hover:text-green-900"
+                            }`}
+                            title={`${
+                              student.status === "active"
+                                ? "Deactivate"
+                                : "Activate"
+                            } Student`}
                           >
-                            {student.status === 'active' ? <FaToggleOn /> : <FaToggleOff />}
+                            {student.status === "active" ? (
+                              <FaToggleOn />
+                            ) : (
+                              <FaToggleOff />
+                            )}
                           </button>
                         </>
                       )}
-                      {hasPermission('students', 'delete') && (
+                      {hasPermission("students", "delete") && (
                         <button
                           onClick={() => handleDelete(student)}
                           className="text-red-600 hover:text-red-900"
@@ -257,61 +306,64 @@ const ManageStudents = () => {
 
       {/* Edit Modal */}
       {showEditModal && (
-        <div className=" fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 ">
-          <div className="bg-white rounded-lg p-6 w-full max-w-md">
+        <div className=" fixed overflow-y-auto -top-10 inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4   ">
+          <div className="bg-[#eee2c7] rounded-lg p-6 w-[60%]">
             <div className="flex justify-between items-center mb-4">
-              <h3 className="text-lg font-semibold">Edit Student</h3>
+              <h3 className="text-3xl border-b font-bold ">Edit Student</h3>
               <button onClick={() => setShowEditModal(false)}>
                 <FaTimes className="text-gray-500" />
               </button>
             </div>
             <form onSubmit={handleUpdateStudent} className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium mb-1">Name</label>
+             <div className='flex flex-col gap-2 sm:flex-row '> 
+              <div className='flex-1'>
+                <label className=" text-sm font-medium">Name</label>
                 <input
                   type="text"
                   value={editForm.name}
-                  onChange={(e) => setEditForm({...editForm, name: e.target.value})}
+                  onChange={(e) =>
+                    setEditForm({ ...editForm, name: e.target.value })
+                  }
                   className="w-full border rounded px-3 py-2"
                   required
                 />
+                
               </div>
-              <div>
-                <label className="block text-sm font-medium mb-1">Email</label>
+               <div className='flex-1'>
+                <label className=" text-sm font-medium ">Email</label>
                 <input
                   type="email"
                   value={editForm.email}
-                  onChange={(e) => setEditForm({...editForm, email: e.target.value})}
+                  onChange={(e) =>
+                    setEditForm({ ...editForm, email: e.target.value })
+                  }
                   className="w-full border rounded px-3 py-2"
                   required
                 />
               </div>
-              <div>
-                <label className="block text-sm font-medium mb-1">Phone</label>
+              </div>
+             
+              <div className='flex flex-col gap-2 sm:flex-row '>
+              <div className='flex-1'>
+                <label className=" text-sm font-medium ">Phone</label>
                 <input
                   type="tel"
                   value={editForm.phone}
-                  onChange={(e) => setEditForm({...editForm, phone: e.target.value})}
-                  className="w-full border rounded px-3 py-2"
+                  onChange={(e) =>
+                    setEditForm({ ...editForm, phone: e.target.value })
+                  }
+                  className="w-full border rounded px-3 py-1"
                   required
                 />
-              </div>
-              <div>
-                <label className="block text-sm font-medium mb-1">Address</label>
-                <textarea
-                  value={editForm.address}
-                  onChange={(e) => setEditForm({...editForm, address: e.target.value})}
-                  className="w-full border rounded px-3 py-2"
-                  rows="3"
-                  required
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium mb-1">Shift</label>
+                </div>
+                 <div className='flex-1'>
+                <label className=" text-sm font-medium ">Shift</label>
                 <select
                   value={editForm.shift}
-                  onChange={(e) => setEditForm({...editForm, shift: e.target.value})}
-                  className="w-full border rounded px-3 py-2"
+                  onChange={(e) =>
+                    setEditForm({ ...editForm, shift: e.target.value })
+                  }
+                  className="w-full border rounded px-3 py-1"
                   required
                 >
                   <option value="morning">Morning</option>
@@ -319,39 +371,59 @@ const ManageStudents = () => {
                   <option value="evening">Evening</option>
                 </select>
               </div>
+              </div>
               <div>
-                <label className="block text-sm font-medium mb-1">Type</label>
+                <label className="block text-sm font-medium ">
+                  Address
+                </label>
+                <textarea
+                  value={editForm.address}
+                  onChange={(e) =>
+                    setEditForm({ ...editForm, address: e.target.value })
+                  }
+                  className="w-full border rounded px-3 py-1"
+                  rows="3"
+                  required
+                />
+              </div>
+             
+              <div>
+                <label className="block text-sm font-medium ">Type</label>
                 <select
                   value={editForm.seatingType}
-                  onChange={(e) => setEditForm({...editForm, seatingType: e.target.value})}
-                  className="w-full border rounded px-3 py-2"
+                  onChange={(e) =>
+                    setEditForm({ ...editForm, seatingType: e.target.value })
+                  }
+                  className="w-full border rounded px-3 py-1"
                   required
                 >
                   <option value="full">full</option>
                   <option value="half">half</option>
-            
                 </select>
               </div>
               <div>
-                <label className="block text-sm font-medium mb-1">Status</label>
+                <label className="block text-sm font-medium ">Status</label>
                 <select
                   value={editForm.status}
-                  onChange={(e) => setEditForm({...editForm, status: e.target.value})}
-                  className="w-full border rounded px-3 py-2"
+                  onChange={(e) =>
+                    setEditForm({ ...editForm, status: e.target.value })
+                  }
+                  className="w-full border rounded px-3 py-1"
                   required
                 >
                   <option value="active">Active</option>
                   <option value="inactive">Inactive</option>
                 </select>
               </div>
-                <div>
-                <label className="block text-sm font-medium mb-1">Fee</label>
+              <div>
+                <label className="block text-sm font-medium ">Fee</label>
                 <input
                   type="number"
                   value={editForm.fee}
-                  onChange={(e) => setEditForm({...editForm, fee: e.target.value})}
-                  className="w-full border rounded px-3 py-2"
-                  
+                  onChange={(e) =>
+                    setEditForm({ ...editForm, fee: e.target.value })
+                  }
+                  className="w-full border rounded px-3 py-1"
                 />
               </div>
               <div className="flex space-x-2">
@@ -376,9 +448,9 @@ const ManageStudents = () => {
 
       {/* View Modal */}
       {showViewModal && selectedStudent && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg p-6 w-full max-w-md">
-            <div className="flex justify-between items-center mb-4">
+        <div className="fixed overflow-y-auto  -top-10  inset-0  bg-black bg-opacity-50 flex items-center justify-center z-50 ">
+          <div className="bg-white rounded-lg p-6 w-screen  max-w-md">
+            <div className="flex justify-between  items-center mb-1">
               <h3 className="text-lg font-semibold">Student Details</h3>
               <button onClick={() => setShowViewModal(false)}>
                 <FaTimes className="text-gray-500" />
@@ -386,44 +458,85 @@ const ManageStudents = () => {
             </div>
             <div className="space-y-3">
               <div>
-                <label className="block text-sm font-medium text-gray-600">Name</label>
+                <label className="block text-sm font-medium text-gray-600">
+                  Name
+                </label>
                 <p className="text-gray-900">{selectedStudent.name}</p>
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-600">Email</label>
+                <label className="block text-sm font-medium text-gray-600">
+                  Email
+                </label>
                 <p className="text-gray-900">{selectedStudent.email}</p>
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-600">Phone</label>
+                <label className="block text-sm font-medium text-gray-600">
+                  Phone
+                </label>
                 <p className="text-gray-900">{selectedStudent.phone}</p>
               </div>
-              {selectedStudent.fee && (<div>
-                <label className="block text-sm font-medium text-gray-600">fee</label>
-                <p className="text-gray-900">{selectedStudent.fee}</p>
-              </div>) } 
+              {selectedStudent.seatNo !== null &&
+                selectedStudent.seatNo !== undefined && (
+                  <div>
+                    <label className="block text-sm font-medium text-gray-600">
+                      Seat.No
+                    </label>
+                    <p className="text-gray-900">{selectedStudent.seatNo}</p>
+                  </div>
+                )}
+              {selectedStudent.fee && (
+                <div>
+                  <label className="block text-sm font-medium text-gray-600">
+                    fee
+                  </label>
+                  <p className="text-gray-900">{selectedStudent.fee}</p>
+                </div>
+              )}
               <div>
-                <label className="block text-sm font-medium text-gray-600">Address</label>
+                <label className="block text-sm font-medium text-gray-600">
+                  Address
+                </label>
                 <p className="text-gray-900">{selectedStudent.address}</p>
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-600">Shift</label>
-                <p className="text-gray-900 capitalize">{selectedStudent.shift}</p>
+                <label className="block text-sm font-medium text-gray-600">
+                  Shift
+                </label>
+                <p className="text-gray-900 capitalize">
+                  {selectedStudent.shift}
+                </p>
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-600">Status</label>
-                <p className="text-gray-900 capitalize">{selectedStudent.status}</p>
+                <label className="block text-sm font-medium text-gray-600">
+                  Status
+                </label>
+                <p className="text-gray-900 capitalize">
+                  {selectedStudent.status}
+                </p>
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-600">Type</label>
-                <p className="text-gray-900 capitalize">{selectedStudent.seatingType}</p>
+                <label className="block text-sm font-medium text-gray-600">
+                  Type
+                </label>
+                <p className="text-gray-900 capitalize">
+                  {selectedStudent.seatingType}
+                </p>
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-600">Joined Date</label>
-                <p className="text-gray-900">{new Date(selectedStudent.createdAt).toLocaleDateString()}</p>
+                <label className="block text-sm font-medium text-gray-600">
+                  Joined Date
+                </label>
+                <p className="text-gray-900">
+                  {new Date(selectedStudent.createdAt).toLocaleDateString()}
+                </p>
               </div>
-               <div>
-                <label className="block text-sm font-medium text-gray-600">EndDate</label>
-                <p className="text-gray-900">{new Date(selectedStudent.endDate).toLocaleDateString()}</p>
+              <div>
+                <label className="block text-sm font-medium text-gray-600">
+                  EndDate
+                </label>
+                <p className="text-gray-900">
+                  {new Date(selectedStudent.endDate).toLocaleDateString()}
+                </p>
               </div>
             </div>
             <div className="mt-6">
@@ -443,14 +556,17 @@ const ManageStudents = () => {
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white rounded-lg p-6 w-full max-w-md">
             <div className="flex justify-between items-center mb-4">
-              <h3 className="text-lg font-semibold text-red-600">Delete Student</h3>
+              <h3 className="text-lg font-semibold text-red-600">
+                Delete Student
+              </h3>
               <button onClick={() => setShowDeleteModal(false)}>
                 <FaTimes className="text-gray-500" />
               </button>
             </div>
             <div className="mb-4">
               <p className="text-gray-700 mb-2">
-                Are you sure you want to delete <strong>{selectedStudent.name}</strong>?
+                Are you sure you want to delete{" "}
+                <strong>{selectedStudent.name}</strong>?
               </p>
               <p className="text-sm text-gray-600 mb-4">
                 To confirm, please enter the student's phone number:
@@ -463,7 +579,7 @@ const ManageStudents = () => {
                 placeholder="Enter phone number to confirm"
                 value={deletePhoneInput}
                 onChange={(e) => setDeletePhoneInput(e.target.value)}
-                className="w-full border rounded px-3 py-2"
+                className="w-full border rounded px-3 py-1"
               />
             </div>
             <div className="flex space-x-2">
@@ -491,7 +607,7 @@ const ManageStudents = () => {
         </div>
       )}
     </div>
-  )
+  );
 }
 
 export default ManageStudents
