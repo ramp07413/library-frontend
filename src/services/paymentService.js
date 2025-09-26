@@ -6,26 +6,28 @@ export const paymentService = {
     return response.data;
   },
 
-  getStats: async () => {
-    const response = await api.get('/payments/stats');
+  addPendingPayment: async (paymentData) => {
+    const response = await api.post('/payments/addPending', paymentData);
     return response.data;
   },
 
-  exportPayments: async (params = {}) => {
-    const response = await api.get('/payments/export', { 
-      params,
-      responseType: 'blob'
-    });
+  depositPayment: async (paymentData) => {
+    const response = await api.put('/payments/depositPayment', paymentData);
     return response.data;
   },
 
-  update: async (id, paymentData) => {
-    const response = await api.put(`/payments/${id}`, paymentData);
+  getOneStudentPayment: async (id) => {
+    const response = await api.get(`/payments/get/${id}`);
     return response.data;
   },
 
-  // Legacy method for backward compatibility
-  updateStatus: async (id, statusData) => {
-    return await paymentService.update(id, statusData);
+  updatePayment: async (id, paymentData) => {
+    const response = await api.patch(`/payments/update/${id}`, paymentData);
+    return response.data;
   },
+
+  deletePayment: async (id) => {
+    const response = await api.delete(`/payments/delete/${id}`);
+    return response.data;
+  }
 };

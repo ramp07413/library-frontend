@@ -21,9 +21,8 @@ export const useAlertStore = create((set, get) => ({
     try {
       await alertService.markAsRead(id);
       set({
-
         alerts: get().alerts.map(a => a._id === id ? {...a, read: true} : a)
-
+      })
       return { success: true };
     } catch {
       return { success: false };
@@ -48,9 +47,8 @@ export const useAlertStore = create((set, get) => ({
     try {
       await alertService.delete(_id)
         
-          const updatealert = get().alerts.filter((alert)=>alert._id !== _id)
-
-          set({alerts : updatealert,isLoading:false})
+         const updatealert = get().alerts.filter((alert)=>alert._id !== _id)
+        set({alerts : updatealert,isLoading:false})
     } catch (error) {
       set({isLoading:true})
       console.log("jjh",error)
